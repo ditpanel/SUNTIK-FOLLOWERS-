@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard - Transaksi & API</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">SD</div>
+        <div class="brand-text">Super Dashboard</div>
+      </div>
+      <div class="datetime" id="datetime">--:--</div>
+    </header>
+
+    <main class="container">
+      <section class="balance-card">
+        <div>
+          <div class="label">Saldo Anda</div>
+          <div class="amount" id="balance">Rp0</div>
+        </div>
+        <div class="txn-count">
+          <div class="label">Total Transaksi</div>
+          <div id="txnCount">0</div>
+        </div>
+      </section>
+
+      <nav class="quick-actions">
+        <button class="btn" id="btnTopup">Isi Saldo</button>
+        <button class="btn" id="btnHelp">Bantuan</button>
+        <button class="btn" id="btnRedeem">Redeem</button>
+        <button class="btn" id="btnMutasi">Mutasi Saldo</button>
+      </nav>
+
+      <section class="notice">Simulasi — bisa ekspor transaksi & kirim data ke API demo.</section>
+
+      <section class="banner">
+        <div class="banner-inner">Tampilan simple & layanan terlengkap</div>
+      </section>
+
+      <section class="services">
+        <h3>Best Seller</h3>
+        <div class="service-grid" id="serviceGrid"></div>
+      </section>
+    </main>
+
+    <footer class="bottom-nav">
+      <div>Home</div>
+      <div>Rekomendasi</div>
+      <div>Informasi</div>
+      <div>Transaksi</div>
+      <div>Profil</div>
+    </footer>
+  </div>
+
+  <!-- Modals -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-body">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
